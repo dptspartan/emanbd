@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Eman</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="LightBulbs">
+        <img src="./Assets/bulb_yellow.png" />
+        <img src="./Assets/bulb_blue.png" />
+        <img src="./Assets/bulb_green.png" />
+        <img src="./Assets/bulb_orange.png" />
+        <img src="./Assets/bulb_pink.png" />
+        <img src="./Assets/bulb_red.png" />
+    </div>
+    <div class="Banner">
+        <img src="./Assets/banner.png" >
+    </div>
+    <div class="Greeting">
+        <h1>"Cheers to another year of growth and success, <span class="highlight">Eman!</span> Happy Birthday from all of us at CSOLS!"</h1>
+    </div>
+    <!-- Circular button -->
+    <button id="audioButton">&#9654;</button>
+
+    <!-- Audio element -->
+    <audio id="audio" src="./Assets/EMAAN - Happy Birthday Emaan.mp3"></audio>
+
+    <script>
+        // JavaScript to play and pause audio when the button is clicked
+        var isPlaying = false;
+        var audio = document.getElementById('audio');
+
+        document.getElementById('audioButton').addEventListener('click', function() {
+            if (!isPlaying) {
+                audio.play();
+                isPlaying = true;
+                document.getElementById('audioButton').innerHTML = "&#10074;&#10074;"; // Pause icon
+            } else {
+                audio.pause();
+                isPlaying = false;
+                document.getElementById('audioButton').innerHTML = "&#9654;"; // Play icon
+            }
+        });
+
+        // Add event listener to reset audio state when it finishes playing
+        audio.addEventListener('ended', function() {
+            isPlaying = false;
+            document.getElementById('audioButton').innerHTML = "&#9654;"; // Reset to play icon
+        });
+    </script>
+</body>
+</html>
