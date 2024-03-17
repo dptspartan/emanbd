@@ -94,7 +94,7 @@ body{
     margin-top: 110px; /* Adjust as needed */
     left: 50%;
     transform: translateX(-50%);
-    font-family: 'Indie Flower', cursive; /* Use the Indie Flower font */
+    font-family: 'Indie Flower'; /* Use the Indie Flower font */
     color: #17aa0d; /* Choose a good color */
     font-size: 10px;
 }
